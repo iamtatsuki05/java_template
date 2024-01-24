@@ -1,0 +1,30 @@
+version: "3.2"
+services:
+  java6:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: java6
+      args:
+        progress: plain
+    user: root
+    volumes:
+      - type: bind
+        source: ./
+        target: /main
+    working_dir: /main
+    tty: true
+  base:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: base
+      args:
+        progress: plain
+    user: root
+    volumes:
+      - type: bind
+        source: ./
+        target: /main
+    working_dir: /main
+    tty: true
