@@ -9,8 +9,8 @@
 1. connect : `docker compose exec <service name(ex:base)> bash`
 2. disconect : `exit`
 ### Starting and Stopping Containers
-1. Starting : `docker stop <container name>`
-2. Stopping : `docker start <container name>`
+1. Starting : `docker compose start`
+2. Stopping : `docker compose stop`
 
 ## Directory structure
 ```text
